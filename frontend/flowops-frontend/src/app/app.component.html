@@ -1,0 +1,39 @@
+<div style="
+    margin: 0; 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174'); 
+    background-size: cover; 
+    background-position: center;
+">
+  
+  <main style="background: white; width: 100%; max-width: 450px; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <header style="text-align: center; margin-bottom: 25px;">
+      <h1 style="color: #2d3748; font-family: sans-serif;">TaskFlow</h1>
+    </header>
+
+    <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+      <input [(ngModel)]="newTask.title" placeholder="Nova tarefa..." style="flex: 1; padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; outline: none;">
+      <button (click)="addTask()" style="padding: 12px 18px; background: #764ba2; color: white; border: none; border-radius: 10px; cursor: pointer;">
+        Adicionar
+      </button>
+    </div>
+
+    <ul style="list-style: none; padding: 0;">
+      <li *ngFor="let t of tasks" style="display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #f0f0f0;">
+        <span style="font-family: sans-serif; color: #4a5568;">{{ t.title }}</span>
+        
+        <div style="display: flex; gap: 10px;">
+          <button (click)="editTask(t)" style="background: none; border: none; cursor: pointer; color: #d69e2e; font-size: 1.2rem;">
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button (click)="deleteTask(t.id)" style="background: none; border: none; cursor: pointer; color: #e53e3e; font-size: 1.2rem;">
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </main>
+</div>
