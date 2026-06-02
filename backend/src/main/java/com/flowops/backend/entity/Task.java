@@ -28,7 +28,7 @@ public class Task {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private TaskStatus status;
+    private TaskStatus status; 
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
@@ -36,11 +36,14 @@ public class Task {
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
-
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
         updatedAt = LocalDateTime.now();
+        
+        if (this.status == null) {
+            this.status = TaskStatus.PENDING; 
+        }
     }
 
     @PreUpdate

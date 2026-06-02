@@ -1,0 +1,7 @@
+/home/mauricio/teste-backend/src/main/java/com/flowops/backend/BackendApplication.java
+/home/mauricio/teste-backend/src/main/java/com/flowops/backend/controller/TaskController.java
+/home/mauricio/teste-backend/src/main/java/com/flowops/backend/entity/Task.java
+/home/mauricio/teste-backend/src/main/java/com/flowops/backend/entity/TaskStatus.java
+/home/mauricio/teste-backend/src/main/java/com/flowops/backend/exception/GlobalExceptionHandler.java
+/home/mauricio/teste-backend/src/main/java/com/flowops/backend/repository/TaskRepository.java
+/home/mauricio/teste-backend/src/main/java/com/flowops/backend/service/TaskService.java
